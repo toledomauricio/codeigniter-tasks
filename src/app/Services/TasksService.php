@@ -33,6 +33,13 @@ class TasksService
         return ['success' => true, 'data' => $this->taskModel->find($insertedId)];
     }
 
+    public function getTaskById($id)
+    {
+        $task = $this->taskModel->find($id);
+        if (!$task) return null;
+        return $task;
+    }
+
     public function updateTask($id, $data)
     {
         $task = $this->taskModel->find($id);

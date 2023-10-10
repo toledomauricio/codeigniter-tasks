@@ -41,6 +41,17 @@ class TasksApiController extends BaseController
         }
     }
 
+    public function show($id)
+    {
+        $task = $this->tasksService->getTaskById($id);
+
+        if ($task) {
+            return $this->respond($task, 200);
+        } else {
+            return $this->respond(['message' => 'Tarefa não encontrada.'], 404);
+        }
+    }
+
     public function update($id)
     {
         $request = $this->request->getJSON();
