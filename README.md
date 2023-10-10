@@ -96,7 +96,7 @@ composer exec phpunit
 Certifique-se de estar no ambiente Docker e dentro do diretório do seu projeto.
 
 ## Cobertura de Testes
-
+![Cobertura de Testes](https://github.com/toledomauricio/codeigniter-tasks/blob/master/documentation/testCoverage.png?raw=true)
 ---
 
 Contribuições são bem-vindas! Sinta-se à vontade para abrir uma issue ou enviar um pull request.✨
