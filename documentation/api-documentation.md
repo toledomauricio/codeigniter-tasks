@@ -74,7 +74,7 @@ Content-Type: application/json
 {
   "title": "Tarefa Atualizada",
   "description": "Descrição atualizada da tarefa",
-  "status": "completed"
+  "status": "done"
 }
 ```
 
