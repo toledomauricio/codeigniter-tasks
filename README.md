@@ -61,6 +61,42 @@ O projeto estará disponível em http://localhost se você não possuir nenhum s
 A API Docs possui todas informações necessária que você precisa para efetuar suas requisições no projeto
 - [Documentação da API](https://github.com/toledomauricio/codeigniter-tasks/blob/master/documentation/api-documentation.md)
 
+## Cobertura de Testes da API 🧪
+
+Para garantir a qualidade e confiabilidade do código, foram criados alguns testes. Abaixo estão os principais testes de integração da API:
+
+### Teste `testIndex()`
+
+- **Descrição:** Este teste verifica se a rota de listagem de tarefas (GET) retorna o status HTTP 200, indicando sucesso.
+- **Método:** `testIndex()`
+
+### Teste `testCreate()`
+
+- **Descrição:** Este teste verifica a criação de uma nova tarefa (POST) com dados aleatórios. Ele verifica se a resposta inclui o status HTTP 201 (Created) e se os dados retornados correspondem aos dados enviados.
+- **Método:** `testCreate()`
+
+### Teste `testUpdate()`
+
+- **Descrição:** Este teste verifica a atualização de uma tarefa existente (PUT). Primeiro, ele cria uma tarefa, e depois, atualiza seus dados. Ele verifica se o status HTTP 200 é retornado e se os dados atualizados correspondem aos dados enviados.
+- **Método:** `testUpdate()`
+
+### Teste `testDelete()`
+
+- **Descrição:** Este teste verifica a exclusão de uma tarefa (DELETE). Ele cria uma tarefa, a exclui e, em seguida, verifica se a tarefa foi removida com sucesso, retornando o status HTTP 204 (No Content).
+- **Método:** `testDelete()`
+
+## Executando os Testes
+
+Para executar os testes, você pode usar o seguinte comando dentro do container:
+
+```bash
+composer exec phpunit
+```
+
+Certifique-se de estar no ambiente Docker e dentro do diretório do seu projeto.
+
+## Cobertura de Testes
+
 ---
 
 Contribuições são bem-vindas! Sinta-se à vontade para abrir uma issue ou enviar um pull request.✨
