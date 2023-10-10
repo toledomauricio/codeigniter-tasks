@@ -46,6 +46,17 @@ composer install
 
 O Composer irá baixar e instalar todas as bibliotecas e pacotes especificados no arquivo composer.json, garantindo que todas as dependências necessárias estejam prontas para uso.
 
+## Rodando as Migrations com Spark
+Após instalar as dependências do Composer e você está usando o container do projeto, não será necessário configurar configurar o Database.php, do contrário, você já sabe o que fazer.
+
+Agora, rode as migratios:
+```bash
+    php spark migrate
+```
+
+## Acessando o projeto
+O projeto estará disponível em http://localhost se você não possuir nenhum serviço viculado a porta 80, caso possua, finalize o serviço antes de rodar o container.
+
 ## API Docs
 A API Docs possui todas informações necessária que você precisa para efetuar suas requisições no projeto
 - [Documentação da API](https://github.com/toledomauricio/codeigniter-tasks/blob/master/documentation/api-documentation.md)
