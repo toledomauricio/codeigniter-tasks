@@ -21,7 +21,7 @@ Esta API permite gerenciar tarefas, como criar, listar, atualizar e excluir tare
 - **Descrição:** Cria uma nova tarefa com os seguintes campos:
   - `title` (obrigatório): O título da tarefa.
   - `description`: A descrição da tarefa.
-  - `status`: O status da tarefa (padrão: "pending").
+  - `status` (opcional): O status da tarefa (possíveis valores: "done," "canceled," "pending"; padrão: "pending").
 
 ### Atualizar uma tarefa
 
@@ -30,7 +30,7 @@ Esta API permite gerenciar tarefas, como criar, listar, atualizar e excluir tare
 - **Descrição:** Atualiza uma tarefa existente com base no ID fornecido. Os campos atualizáveis são:
   - `title`: O título da tarefa.
   - `description`: A descrição da tarefa.
-  - `status`: O status da tarefa.
+  - `status` (opcional): O status da tarefa (possíveis valores: "done," "canceled," "pending").
 
 ### Excluir uma tarefa
 
