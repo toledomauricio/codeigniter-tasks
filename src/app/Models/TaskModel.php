@@ -31,7 +31,6 @@ class TaskModel extends Model
         ],
         'status' => [
             'required' => 'O campo status é obrigatório.',
-            'enum_string' => 'O campo status deve ser "pending", "done" ou "canceled".'
         ]
     ];
 }
