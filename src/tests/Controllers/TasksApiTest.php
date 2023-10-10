@@ -73,4 +73,24 @@ class TasksApiTest extends FeatureTestCase
         $this->assertSame($updatedData['title'], $dataDecoded->data->title);
         $this->assertSame($updatedData['description'],$dataDecoded->data->description);
     }
+
+    public function testDelete()
+    {
+        $initialData = [
+            'title' => 'Tarefa de teste inicial',
+            'description' => 'Descrição de teste inicial',
+            'status' => 'pending',
+        ];
+
+        $json = json_encode($initialData);
+
+        $createResult = $this->withHeaders(['Content-Type' => 'application/json'])
+            ->withBody($json)
+            ->post('/api/tasks');
+
+        $createdTask = json_decode($createResult->getJson());
+
+        $deleteResult = $this->delete('/api/tasks/delete/' . $createdTask->id);
+        $deleteResult->assertStatus(204);
+    }
 }

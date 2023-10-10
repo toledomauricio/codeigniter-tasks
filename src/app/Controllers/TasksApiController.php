@@ -59,7 +59,7 @@ class TasksApiController extends BaseController
         $result = $this->tasksService->deleteTask($id);
 
         if ($result['success']) {
-            return $this->respond(['message' => $result['message']]);
+            return $this->respond(['message' => $result['message']], 204);
         } else {
             return $this->respond(['message' => $result['message']], 404);
         }
