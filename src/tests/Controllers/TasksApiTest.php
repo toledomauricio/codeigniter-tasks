@@ -92,5 +92,9 @@ class TasksApiTest extends FeatureTestCase
 
         $deleteResult = $this->delete('/api/tasks/delete/' . $createdTask->id);
         $deleteResult->assertStatus(204);
+
+        // Tenta buscar a tarefa excluída para verificar se não existe mais
+        $fetchResult = $this->get('/api/tasks/' . $createdTask->id);
+        $fetchResult->assertStatus(404);
     }
 }
