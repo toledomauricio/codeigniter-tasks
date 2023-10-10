@@ -46,6 +46,10 @@ composer install
 
 O Composer irá baixar e instalar todas as bibliotecas e pacotes especificados no arquivo composer.json, garantindo que todas as dependências necessárias estejam prontas para uso.
 
+## API Docs
+A API Docs possui todas informações necessária que você precisa para efetuar suas requisições no projeto
+- [Documentação da API](https://github.com/toledomauricio/codeigniter-tasks/blob/master/documentation/api-documentation.md)
+
 ---
 
 Contribuições são bem-vindas! Sinta-se à vontade para abrir uma issue ou enviar um pull request.✨
