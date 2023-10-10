@@ -51,7 +51,7 @@ class Database extends Config
      */
     public array $tests = [
         'DSN'          => '',
-        'hostname'     => '127.0.0.1',
+        'hostname'     => 'db', // se for rodar fora do docker, altere para 127.0.0.1, se rodar no docker, mantenha db
         'username'     => 'root',
         'password'     => 'codeigniter@',
         'database'     => 'test',

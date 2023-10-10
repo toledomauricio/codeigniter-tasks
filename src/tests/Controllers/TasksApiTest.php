@@ -40,6 +40,7 @@ class TasksApiTest extends FeatureTestCase
 
     public function testUpdate()
     {
+        // Realiza um teste para a rota de atualização (PUT) de tarefas
         $initialData = [
             'title' => 'Tarefa de teste inicial',
             'description' => 'Descrição de teste inicial',
@@ -76,6 +77,7 @@ class TasksApiTest extends FeatureTestCase
 
     public function testDelete()
     {
+        // Realiza um teste para a rota de exclusão (DELETE) de tarefas
         $initialData = [
             'title' => 'Tarefa de teste inicial',
             'description' => 'Descrição de teste inicial',
