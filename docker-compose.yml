@@ -5,8 +5,8 @@ services:
             context: .
             dockerfile: docker/mysql/Dockerfile
         environment: 
-            MYSQL_DATABASE: ${MYSQL_DATABASE}
-            MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+            MYSQL_DATABASE: test
+            MYSQL_ROOT_PASSWORD: codeigniter@
         command: --default-authentication-plugin=mysql_native_password
         restart: unless-stopped
         volumes:
@@ -18,10 +18,10 @@ services:
             context: .
             dockerfile: docker/apache/Dockerfile
             args:
-                uid: ${UID}
+                uid: 1000
         environment:
-            - APACHE_RUN_USER=#${UID}
-            - APACHE_RUN_GROUP=#${UID}
+            - APACHE_RUN_USER=#1000
+            - APACHE_RUN_GROUP=#1000
         restart: unless-stopped
         volumes: 
             - ./src:/var/www/html
