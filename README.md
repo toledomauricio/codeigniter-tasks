@@ -15,30 +15,6 @@
 - Utilização de Docker para conteinerização do projeto.
 - Documentação clara e concisa do código.
 
-## Estrutura do Projeto
-
-├── app/
-│ ├── Controllers/
-│ │ ├── TasksApiController.php
-│ │ └── ...
-│ ├── Models/
-│ │ ├── TaskModel.php
-│ │ └── ...
-│ ├── Services/
-│ │ ├── TasksService.php
-│ │ └── ...
-│ ├── ...
-│ └── ...
-├── docker/
-│ ├── apache/
-│ │ └── Dockerfile
-│ │ └── 000-default.conf
-│ ├── mysql/
-│ │ └── Dockerfile
-│ ├── codeigniter_database.sql
-│ ├── Dockerfile
-│ └── ...
-
 ## Docker Compose
 
 O projeto utiliza Docker Compose para conteinerização. Você pode executar o seguinte comando para iniciar o projeto:
