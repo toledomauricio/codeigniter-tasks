@@ -37,4 +37,40 @@ class TasksApiTest extends FeatureTestCase
         $this->assertSame($data['description'], $dataDecoded->description);
         $this->assertSame($data['status'], $dataDecoded->status);
     }
+
+    public function testUpdate()
+    {
+        $initialData = [
+            'title' => 'Tarefa de teste inicial',
+            'description' => 'Descrição de teste inicial',
+            'status' => 'pending',
+        ];
+
+        $json = json_encode($initialData);
+
+        $createResult = $this->withHeaders(['Content-Type' => 'application/json'])
+            ->withBody($json)
+            ->post('/api/tasks');
+
+        $createdTask = json_decode($createResult->getJson());
+
+        $updatedData = [
+            'title' => 'Tarefa atualizada',
+            'description' => 'Descrição atualizada',
+            'status' => 'completed',
+        ];
+
+        $json = json_encode($updatedData);
+
+        $updateResult = $this->withHeaders(['Content-Type' => 'application/json'])
+            ->withBody($json)
+            ->put('/api/tasks/update/' . $createdTask->id);
+
+        $updateResult->assertStatus(200);
+        $updatedTask = $updateResult->getJson();
+        $dataDecoded = json_decode($updatedTask);
+        
+        $this->assertSame($updatedData['title'], $dataDecoded->data->title);
+        $this->assertSame($updatedData['description'],$dataDecoded->data->description);
+    }
 }
