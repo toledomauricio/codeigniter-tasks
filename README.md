@@ -23,7 +23,30 @@ O projeto utiliza Docker Compose para conteinerização. Você pode executar o s
 docker-compose up -d
 ```
 
-Acesse a API em [http://localhost/api/tasks](http://localhost/api/tasks).
+## Guia de Configuração do Projeto com Composer
+
+Este guia o ajudará a configurar o ambiente de desenvolvimento para o projeto utilizando o Composer após iniciar o ambiente Docker. Siga os passos abaixo:
+
+## Acessando o Bash no Docker
+
+Primeiro, você precisa acessar o ambiente Docker executando o seguinte comando no seu terminal:
+
+```bash
+docker exec -it tasksapi_web_1 bash
+```
+
+Este comando abrirá um terminal interativo dentro do contêiner Docker, onde você poderá executar os comandos necessários para configurar o projeto.
+
+## Instalando Dependências com o Composer
+Dentro do terminal interativo do Docker, execute o seguinte comando para instalar as dependências do Codeigniter4 e outras dependências do projeto:
+
+```bash
+composer install
+```
+
+O Composer irá baixar e instalar todas as bibliotecas e pacotes especificados no arquivo composer.json, garantindo que todas as dependências necessárias estejam prontas para uso.
+
+---
 
 Contribuições são bem-vindas! Sinta-se à vontade para abrir uma issue ou enviar um pull request.✨
 
